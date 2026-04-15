@@ -46,7 +46,9 @@ Desarrollo de la interfaz web mediante HTML y CSS, creando una estructura semán
 
 Diseño y creación de una base de datos relacional que modela el funcionamiento de la tienda, incluyendo entidades como productos, usuarios y pedidos, así como sus relaciones.
 
+La base de datos se ha diseñado , adaptándose al nivel de 1º DAW.
 
+Por este motivo, algunos elementos como la plataforma y el género se han agrupado dentro de la misma tabla (categoría), con el objetivo de evitar una estructura excesivamente compleja.
 
 
 
