@@ -45,5 +45,7 @@ Este entorno permite trabajar con la aplicación Java y la base de datos en el m
 
 ###### **Base de datos**
 
-La base de datos se utiliza mediante MySQL, incluido en XAMPP, y se gestiona con phpMyAdmin, lo que permite crear tablas y gestionar los datos de forma sencilla.
+La base de datos se utiliza mediante MySQL local, incluido en XAMPP, y se gestiona con phpMyAdmin, lo que permite crear tablas y gestionar los datos de forma sencilla.
+
+La base se accede desde la aplicación Java mediante JDBC.
 
