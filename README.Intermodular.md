@@ -2,13 +2,7 @@
 
 
 
-
-
-
-
 Tienda de Videojuegos - Bit-Love
-
-
 
 ##### **Descripción**
 
@@ -139,8 +133,6 @@ Desarrollo de un perfil profesional inicial, presentación del proyecto como par
 
 
 Autor
-
-
 
 Estudiante de DAW - Sergio Romo Miguel
 
