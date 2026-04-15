@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-03-2026 a las 21:26:49
+-- Tiempo de generación: 15-04-2026 a las 14:14:13
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -137,17 +137,18 @@ CREATE TABLE `pedido` (
   `Id_pedido` int(11) NOT NULL,
   `fecha` date NOT NULL,
   `metodo_pago` varchar(50) NOT NULL,
-  `Id_cliente` int(11) NOT NULL
+  `Id_cliente` int(11) NOT NULL,
+  `total` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `pedido`
 --
 
-INSERT INTO `pedido` (`Id_pedido`, `fecha`, `metodo_pago`, `Id_cliente`) VALUES
-(1, '2026-03-20', 'Tarjeta', 1),
-(2, '2026-03-21', 'Contrareembolso', 2),
-(3, '2026-03-22', 'Tarjeta', 3);
+INSERT INTO `pedido` (`Id_pedido`, `fecha`, `metodo_pago`, `Id_cliente`, `total`) VALUES
+(1, '2026-03-20', 'Tarjeta', 1, 109.98),
+(2, '2026-03-21', 'Contrareembolso', 2, 69.99),
+(3, '2026-03-22', 'Tarjeta', 3, 119.97);
 
 -- --------------------------------------------------------
 
