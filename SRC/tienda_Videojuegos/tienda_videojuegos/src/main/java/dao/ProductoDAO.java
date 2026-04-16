@@ -1,7 +1,7 @@
 package dao;
 
 import conexion.Conexion;
-
+import model.Producto;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -12,7 +12,6 @@ public class ProductoDAO {
 
         try {
             Connection conexion = Conexion.getConexion();
-
             Statement statement = conexion.createStatement();
 
             String sql = "SELECT * FROM producto";
@@ -63,16 +62,21 @@ public class ProductoDAO {
             ResultSet resultSet = statement.executeQuery(sql);
 
             boolean encontrado = false;
+
             while (resultSet.next()) {
                 encontrado = true;
-                System.out.println(
 
-                        resultSet.getInt("Id_producto") + " - " +
-                                resultSet.getString("nombre") + " - " +
-                                resultSet.getDouble("precio")
+                Producto producto = new Producto(
+                        resultSet.getInt("Id_producto"),
+                        resultSet.getString("nombre"),
+                        resultSet.getDouble("precio"),
+                        resultSet.getInt("stock")
                 );
+
+                System.out.println(producto);
             }
-            if (!encontrado){
+
+            if (!encontrado) {
                 System.out.println("No se ha encontrado ningún producto con ese nombre");
             }
 
@@ -87,15 +91,20 @@ public class ProductoDAO {
             Statement statement = connection.createStatement();
 
             String sql = "DELETE FROM producto WHERE Id_producto = " + idProducto;
+            ResultSet resultSet = statement.executeQuery(sql);
 
-            int filas = statement.executeUpdate(sql);
+            while (resultSet.next()) {
 
-            if (filas > 0){
-                System.out.println("Producto eliminado correctamente");
+                Producto producto = new Producto(
+                        resultSet.getInt("Id_producto"),
+                        resultSet.getString("nombre"),
+                        resultSet.getDouble("precio"),
+                        resultSet.getInt("stock")
+                );
+
+                System.out.println(producto);
             }
-            else{
-                System.out.println("No existe un producto con ese ID");
-            }
+
 
 
         } catch (Exception e) {

@@ -20,7 +20,7 @@ public class Main {
 
             System.out.print("Elige una opción: ");
             opcion = scanner.nextInt();
-            scanner.nextLine(); // limpiar buffer
+            scanner.nextLine();
 
             switch (opcion) {
 
