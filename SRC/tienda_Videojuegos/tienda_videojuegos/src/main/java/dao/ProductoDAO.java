@@ -93,24 +93,40 @@ public class ProductoDAO {
             Statement statement = connection.createStatement();
 
             String sql = "DELETE FROM producto WHERE Id_producto = " + idProducto;
-            ResultSet resultSet = statement.executeQuery(sql);
 
-            while (resultSet.next()) {
+            int filas = statement.executeUpdate(sql);
 
-                Producto producto = new Producto(
-                        resultSet.getInt("Id_producto"),
-                        resultSet.getString("nombre"),
-                        resultSet.getDouble("precio"),
-                        resultSet.getInt("stock")
-                );
-
-                System.out.println(producto);
+            if (filas > 0){
+                System.out.println("Producto eliminado correctamente");
+            } else {
+                System.out.println("No existe un producto con ese ID");
             }
 
+        } catch (Exception e) {
+            System.out.println("Error al eliminar el producto");
+        }
+    }
 
+    public void actualizarProducto(int idProducto, double nuevoPrecio, int nuevoStock) {
+
+        try {
+            Connection con = Conexion.getConexion();
+            Statement st = con.createStatement();
+
+            String sql = "UPDATE producto SET precio = " + nuevoPrecio +
+                    ", stock = " + nuevoStock +
+                    " WHERE Id_producto = " + idProducto;
+
+            int filas = st.executeUpdate(sql);
+
+            if (filas > 0) {
+                System.out.println("Producto actualizado correctamente");
+            } else {
+                System.out.println("No existe ese producto");
+            }
 
         } catch (Exception e) {
-            System.out.println("error al eliminar el producto");
+            System.out.println("Error al actualizar producto");
         }
     }
 }

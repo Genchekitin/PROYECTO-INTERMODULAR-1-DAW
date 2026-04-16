@@ -21,4 +21,8 @@ public class ProductoController {
     public void eliminarProducto(int id){
         dao.eliminarProducto(id);
     }
+
+    public void actualizarProducto(int id, double nuevoPrecio, int nuevoStock){
+        dao.actualizarProducto(id, nuevoPrecio, nuevoStock);
+    }
 }
