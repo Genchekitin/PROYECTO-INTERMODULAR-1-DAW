@@ -1,3 +1,4 @@
+import controller.ProductoController;
 import dao.ProductoDAO;
 import model.Producto;
 
@@ -9,6 +10,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         ProductoDAO dao = new ProductoDAO();
+        ProductoController controller = new ProductoController();
 
         int opcion;
 
@@ -27,7 +29,7 @@ public class Main {
             switch (opcion) {
 
                 case 1:
-                    dao.mostrarProductos();
+                    controller.mostrarProductos();
                     break;
 
                 case 2:
@@ -43,14 +45,14 @@ public class Main {
 
 
                     Producto producto = new Producto(0, nombre, precio, stock);
-                    dao.insertarProducto(producto);
+                    controller.insertarProducto(producto);
                     break;
 
                 case 3:
                     System.out.print("Nombre a buscar: ");
                     String nombreBuscado = scanner.nextLine();
 
-                    dao.buscarProducto(nombreBuscado);
+                    controller.buscarProducto(nombreBuscado);
                     break;
 
                 case 4:
@@ -58,18 +60,18 @@ public class Main {
                     int idEliminar = scanner.nextInt();
                     scanner.nextLine();
 
-                    dao.eliminarProducto(idEliminar);
+                    controller.eliminarProducto(idEliminar);
                     break;
 
                 case 5:
                     System.out.println("Saliendo...");
-                    break;
+                    ;
 
                 default:
                     System.out.println("Opción no válida");
             }
 
-        } while (opcion != 4);
+        } while (opcion != 5);
 
         scanner.close();
     }
