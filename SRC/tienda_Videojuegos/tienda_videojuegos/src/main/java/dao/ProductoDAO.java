@@ -4,6 +4,7 @@ import conexion.Conexion;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ProductoDAO {
@@ -56,7 +57,6 @@ public class ProductoDAO {
 
         try {
             Connection con = Conexion.getConexion();
-
             Statement statement = con.createStatement();
 
             String sql = "SELECT * FROM producto WHERE nombre = '" + nombreBuscado + "'";
@@ -73,6 +73,28 @@ public class ProductoDAO {
 
         } catch (Exception e) {
             System.out.println("Error al buscar el producto");
+        }
+    }
+
+    public void eliminarProducto(int idProducto){
+        try{
+            Connection connection = Conexion.getConexion();
+            Statement statement = connection.createStatement();
+
+            String sql = "DELETE FROM producto WHERE Id_producto = " + idProducto;
+
+            int filas = statement.executeUpdate(sql);
+
+            if (filas > 0){
+                System.out.println("Producto eliminado correctamente");
+            }
+            else{
+                System.out.println("No existe un producto con ese ID");
+            }
+
+
+        } catch (Exception e) {
+            System.out.println("error al eliminar el producto");
         }
     }
 }

@@ -52,6 +52,14 @@ public class Main {
                     break;
 
                 case 4:
+                    System.out.println("ID del producto a eliminar: ");
+                    int idEliminar = scanner.nextInt();
+                    scanner.nextLine();
+
+                    dao.eliminarProducto(idEliminar);
+                    break;
+
+                case 5:
                     System.out.println("Saliendo...");
                     break;
 
