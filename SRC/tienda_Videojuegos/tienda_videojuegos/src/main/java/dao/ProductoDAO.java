@@ -4,7 +4,6 @@ import conexion.Conexion;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ProductoDAO {
@@ -63,12 +62,18 @@ public class ProductoDAO {
 
             ResultSet resultSet = statement.executeQuery(sql);
 
+            boolean encontrado = false;
             while (resultSet.next()) {
+                encontrado = true;
                 System.out.println(
+
                         resultSet.getInt("Id_producto") + " - " +
                                 resultSet.getString("nombre") + " - " +
                                 resultSet.getDouble("precio")
                 );
+            }
+            if (!encontrado){
+                System.out.println("No se ha encontrado ningún producto con ese nombre");
             }
 
         } catch (Exception e) {

@@ -15,7 +15,8 @@ public class Main {
             System.out.println("1. Ver productos");
             System.out.println("2. Insertar producto");
             System.out.println("3. Buscar producto");
-            System.out.println("4. Salir");
+            System.out.println("4. Eliminar producto");
+            System.out.println("5. Salir");
 
             System.out.print("Elige una opción: ");
             opcion = scanner.nextInt();
