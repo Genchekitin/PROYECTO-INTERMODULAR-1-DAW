@@ -32,15 +32,17 @@ public class ProductoDAO {
         }
     }
 
-    public void insertarProducto(String nombre, double precio, int stock, int idCategoria) {
+    public void insertarProducto(Producto producto) {
 
         try {
             Connection connection = Conexion.getConexion();
-
             Statement statement = connection.createStatement();
 
             String sql = "INSERT INTO producto (nombre, precio, stock, Id_categoria) VALUES ('"
-                    + nombre + "', " + precio + ", " + stock + ", " + idCategoria + ")";
+                    + producto.getNombre() + "', "
+                    + producto.getPrecio() + ", "
+                    + producto.getStock() + ", 1)";
+
 
             statement.executeUpdate(sql);
 

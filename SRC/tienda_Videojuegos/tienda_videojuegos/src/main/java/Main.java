@@ -1,4 +1,6 @@
 import dao.ProductoDAO;
+import model.Producto;
+
 import java.util.Scanner;
 public class Main {
 
@@ -37,12 +39,11 @@ public class Main {
 
                     System.out.print("Stock: ");
                     int stock = scanner.nextInt();
-
-                    System.out.print("ID categoría: ");
-                    int idCategoria = scanner.nextInt();
                     scanner.nextLine();
 
-                    dao.insertarProducto(nombre, precio, stock, idCategoria);
+
+                    Producto producto = new Producto(0, nombre, precio, stock);
+                    dao.insertarProducto(producto);
                     break;
 
                 case 3:
