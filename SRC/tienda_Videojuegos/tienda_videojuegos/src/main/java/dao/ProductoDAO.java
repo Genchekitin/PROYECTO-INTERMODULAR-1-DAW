@@ -19,12 +19,13 @@ public class ProductoDAO {
             ResultSet resultSet = statement.executeQuery(sql);
 
             while (resultSet.next()) {
-                System.out.println(
-                        resultSet.getInt("Id_producto") + " - " +
-                                resultSet.getString("nombre") + " - " +
-                                resultSet.getDouble("precio") + " - Stock: " +
+                Producto producto = new Producto(
+                        resultSet.getInt("Id_producto"),
+                                resultSet.getString("nombre"),
+                                resultSet.getDouble("precio"),
                                 resultSet.getInt("stock")
-                );
+                        );
+                System.out.println(producto);
             }
 
         } catch (Exception e) {
