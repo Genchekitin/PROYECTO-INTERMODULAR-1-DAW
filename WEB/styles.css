@@ -106,11 +106,16 @@ nav{
   color: black;
   box-shadow: var(--shadow);
   max-width: 1200px;
-  font-family: "Press Start 2P";
+  
 }
 .tendencias h2{
 
  color: aliceblue;
+ font-family: "Press Start 2P";
+}
+
+.tendencias .titulo{
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -214,9 +219,8 @@ nav{
     transition: 0.3s;
 }
 
-/*================= CONTACTO CON FONDO =================*/
+/*================= CONTACTO  =================*/
 
-/* Solo para la página de contacto */
 .fondo-parallax {
   background-image: url('ASSETS/Fondo/fondo-pagina.png');
   background-size: cover;
@@ -232,7 +236,7 @@ nav{
   font-family: "Press Start 2P";
 }
 
-/* Capa oscura semi-transparente */
+
 #contacto.contacto::before {
   content: '';
   position: absolute;
@@ -247,6 +251,8 @@ nav{
   );
   z-index: 1;
 }
+
+
 
 /* Título y texto por encima del fondo */
 .contacto h1,
@@ -265,6 +271,16 @@ nav{
 .contacto > p {
   font-size: 1.1rem;
   margin-bottom: 40px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px; /* separación entre campos */
+}
+.campo span {
+  margin-bottom: 8px; /* separación label-input */
+  font-size: 14px;
 }
 
 /* El formulario con fondo semi-transparente */
