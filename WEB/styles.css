@@ -1,10 +1,11 @@
 :root {
   --color-principal: #2B282B;
   --color-secundario: #000000;
-  --bordes: 15px;
-  --shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
-  --btnshadow: 4px 3px 10px rgba(188, 65, 184, 0.395);
+  --bordes: 30px;
+  --shadow: 0 0px 30px rgba(117, 53, 115, 0.395);
+  --btnshadow: 4px 4px 10px rgba(188, 65, 184, 0.395);
   --btn: #3e4144;
+  --Ff: Arial, Helvetica, sans-serif;
 }
 
 /* RESET */
@@ -17,6 +18,18 @@
 body{
   background-color: var(--color-principal);
   color: white;
+}
+
+/*================= LAYOUT =================*/
+.layout {
+  display: grid;
+  grid-template-areas:
+    "main main"
+    "sidebar sidebar";
+  grid-template-columns:  1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto; 
 }
 
 /*====================== HEADER ======================*/
@@ -47,7 +60,7 @@ header{
   text-align: center;
 }
 
-.brand-text h1{
+.brand-text h2{
   font-size: 22px;
 }
 
@@ -81,29 +94,26 @@ nav{
   transform: scale(1.1);
 }
 
-/*====================== HERO ======================*/
 
-.hero{
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-}
-
-.hero img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /*====================== TENDENCIAS ======================*/
 
 .tendencias{
   padding: 30px;
-  background-color: #e6eeee;
-  border-radius: 20px;
-  margin: 30px;
+  background-color: rgba(43, 40, 43, 0.92);;
+  border-radius: var(--bordes);
+  margin: 0 auto;
   color: black;
+  box-shadow: var(--shadow);
+  max-width: 1200px;
+  font-family: "Press Start 2P";
 }
+.tendencias h2{
+
+ color: aliceblue;
+}
+
+
 
 /* TITULO */
 .titulo-seccion{
@@ -121,12 +131,12 @@ nav{
 
 /* TARJETAS */
 .tarjeta{
-  background-color: white;
+  background-color:  rgba(21, 20, 21, 0.92);
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
   text-align: center;
   overflow: hidden;
-  width: 200px;
+  width: 350px;
   transition: 0.3s;
 }
 
@@ -138,51 +148,163 @@ nav{
 .tarjeta p{
   padding: 5px;
   font-size: 14px;
+  color: #ccc;
 }
 
 .tarjeta:hover{
   transform: scale(1.05);
 }
 
-/* VER MÁS */
-.ver-mas{
-  text-align: center;
-  margin-top: 20px;
-}
 
-.ver-mas summary{
-  cursor: pointer;
-  font-weight: bold;
-}
 
-/*====================== CINTA ======================*/
 
-.cinta{
-  margin: 20px 0;
-  background-color: darkgray;
-  overflow: hidden;
-}
 
-.cinta-movimiento{
-  display: flex;
-  gap: 20px;
-  padding: 10px;
-  white-space: nowrap;
-}
+
 
 /*====================== CATEGORIAS ======================*/
-
 .categorias{
-  padding: 30px;
-  text-align: center;
+  max-width: 1200px;
+  background-color: rgba(43, 40, 43, 0.92);;
+  justify-items: center;
+  border-radius: var(--bordes);
+  padding-bottom: 1px;
+  margin: 0 auto;
+  box-shadow: var(--shadow);
+  padding-top: 40px;
+  font-family: "Press Start 2P";
 }
 
-.categorias ul{
-  list-style: none;
-  display: grid;
-  flex-wrap: wrap;
+.categorias h3{
+  
+  text-align: center;
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.categoria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 30px; 
+    list-style: none;
+    padding: 0;
+    margin: 25px 20px;
+}
+
+.cat-tarjeta{
+  width: 100%;
+  max-width:300px;
+}
+
+.cat-tarjeta a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.cat-tarjeta img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.cat-tarjeta:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/*================= CONTACTO CON FONDO =================*/
+
+/* Solo para la página de contacto */
+.fondo-parallax {
+  background-image: url('ASSETS/Fondo/fondo-pagina.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;  /* efecto parallax */
+  min-height: 100vh;  /* ocupa toda la pantalla */
+  padding: 60px 30px;
+  position: relative;
+  border-radius: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  font-family: "Press Start 2P";
+}
+
+/* Capa oscura semi-transparente */
+#contacto.contacto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+/* Título y texto por encima del fondo */
+.contacto h1,
+.contacto > p {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.contacto h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.contacto > p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+/* El formulario con fondo semi-transparente */
+.contacto .form {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(43, 40, 43, 0.92);  /* fondo oscuro semi-transparente */
+  padding: 40px;
+  border-radius: var(--bordes);
+  max-width: 1000px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);  /* efecto vidrio esmerilado */
+  box-shadow: var(--shadow);
+}
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* BOTONES */
+.acciones {
+  display: flex;
+  gap: 10px;
   justify-content: center;
-  gap: 15px;
+}
+
+.btn-enviar {
+  background-color: rgb(115, 188, 7);
+  color: white;
+}
+
+.btn-borrar {
+  background-color: gray;
+  color: white;
 }
 
 /*====================== FAQ ======================*/
@@ -203,17 +325,55 @@ footer{
   text-align: center;
 }
 
-.redes ul{
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "footer-contacto footer-logo footer-redes";
+  gap: 100px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.footer-logo img{
+  width: 200px;
+}
+
+.footer-redes .footer-redes-lista {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 18px;
   list-style: none;
-}
-
-.redes img{
-  width: 30px;
-}
-
-.contacto{
   margin-top: 10px;
+}
+
+.footer-redes h3 {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.footer-redes-lista img {
+  width: 50px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer-redes-lista a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-redes-lista a:hover img {
+  transform: scale(1.1);
+}
+
+.footer-contacto{
+  margin-top: 25px;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+
+.footer-contacto h3{
+  margin-bottom: 20px;
+  font-size: 25px;
 }

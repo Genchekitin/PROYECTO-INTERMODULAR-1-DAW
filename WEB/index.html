@@ -1,184 +1,173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio - Catálogo de juegos</title>
 
     <!-- SEO -->
-    <meta name="description" content="Tienda de videojuegos en Salamanca">
+    <meta name="description" content="Tienda de videojuegos en Salamanca" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Favicon -->
-    <link rel="icon" href="WEB/ASSETS/Categorias/logo-empresa.png">
-</head>
+    <link rel="icon" href="ASSETS/Logos/logo_Empresa/Logo_Bit-love.png" />
+  </head>
 
-<body>
-
-<!-- ================= HEADER ================= -->
-<header class="topbar">
-
-    <!-- Logo + Título -->
-    <div class="header-top">
-        <img src="/ASSETS/Logos/logo_Empresa/logo empresa.png" alt="Logo empresa" class="logo">
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="topbar">
+      <!-- Logo + Título -->
+      <div class="header-top">
+        <img
+          src="ASSETS/Logos/logo_Empresa/Logo_Bit-love.png"
+          alt="Logo empresa"
+          class="logo"
+        />
 
         <div class="brand-text">
-            <h1> Bit-Love </h1>
-            <p>Tu relación afectiva más sana</p>
+          <h1>Bit-Love</h1>
+          <p>Tu relación afectiva más sana</p>
         </div>
-    </div>
+      </div>
 
-    <!-- Navegación -->
-    <nav class="nav">
+      <!-- Navegación -->
+      <nav class="nav">
         <a href="index.html" class="btn btn-nav">Inicio</a>
         <a href="Catalogojuegos.html" class="btn btn-nav">Catálogo</a>
         <a href="contacto.html" class="btn btn-nav">Contacto</a>
-        <a href="#FAQ" class="btn btn-nav">Preguntas</a>
         <a href="quienesSomos.html" class="btn btn-nav">Quiénes somos</a>
-    </nav>
+        <a href="FAQ.html" class="btn btn-nav">FAQ</a>
+      </nav>
+    </header>
 
-</header>
+    <!-- ================= MAIN ================= -->
 
-<!-- ================= MAIN ================= -->
-<main>
+    <main>
+      <div class="layout fondo-parallax">
 
-    <!-- HERO / IMAGEN -->
-    <section class="hero">
-        <img src="/ASSETS/Fondo/fondo-pagina.png" alt="Fondo gaming">
-    </section>
 
-    <!-- ================= TENDENCIAS ================= -->
-    <section id="tendencia" class="tendencias">
+        <!-- ================= TENDENCIAS ================= -->
+        <section id="tendencia" class=" tendencias">
+          <h2 class="titulo-seccion">Videojuegos más demandados</h2>
 
-        <h2 class="titulo-seccion">Tendencias</h2>
-
-        <!-- Productos visibles -->
-        <ul class="grid">
+          <!-- Productos visibles -->
+          <ul class="grid">
             <li class="tarjeta">
-                <img src="/ASSETS/Catalogo/PoP1.jpg">
-                <p>Prince of Persia</p>
-                <p>Las arenas del tiempo</p>
-                <p>25,90€</p>
+              <img src="ASSETS/Catalogo/PoP1.jpg" />
+              <p>Prince of Persia</p>
+              <p>Las arenas del tiempo</p>
+              <p>25,90€</p>
             </li>
 
             <li class="tarjeta">
-                <img src="/ASSETS/Catalogo/pop2.jpg">
-                <p>Prince of Persia</p>
-                <p>El alma del guerrero</p>
-                <p>25,90€</p>
+              <img src="ASSETS/Catalogo/pop2.jpg" />
+              <p>Prince of Persia</p>
+              <p>El alma del guerrero</p>
+              <p>25,90€</p>
             </li>
 
             <li class="tarjeta">
-                <img src="/ASSETS/Catalogo/Prince-Of-Persia-The-Two-Thrones-pro-PS2-P2S019-3286735060.jpg">
-                <p>Prince of Persia</p>
-                <p>Las arenas del tiempo</p>
-                <p>25,90€</p>
+              <img
+                src="ASSETS/Catalogo/Prince-Of-Persia-The-Two-Thrones-pro-PS2-P2S019-3286735060.jpg"
+              />
+              <p>Prince of Persia</p>
+              <p>Las arenas del tiempo</p>
+              <p>25,90€</p>
             </li>
-        </ul>
 
-        <!-- Ver más -->
-        <details class="ver-mas">
-            <summary>Ver más</summary>
+            <li class="tarjeta">
+              <img src="ASSETS/Catalogo/Silent-hill.jpg" />
+              <p>Silent Hill</p>
+              <p>19,90€</p>
+            </li>
 
-            <ul class="grid">
-                <li class="tarjeta">
-                    <img src="/ASSETS/Catalogo/Silent-hill.jpg">
-                    <p>Silent Hill</p>
-                    <p>19,90€</p>
-                </li>
+            <li class="tarjeta">
+              <img
+                src="ASSETS/Catalogo/154200-Resident_Evil_-_Code_-_Veronica_.jpg"
+              />
+              <p>Resident Evil</p>
+              <p>19,90€</p>
+            </li>
 
-                <li class="tarjeta">
-                    <img src="ASSETS/Catalogo/154200-Resident_Evil_-_Code_-_Veronica_.jpg">
-                    <p>Resident Evil</p>
-                    <p>19,90€</p>
-                </li>
+            <li class="tarjeta">
+              <img src="ASSETS/Catalogo/rule of rose.jpg" />
+              <p>Rule of Rose</p>
+              <p>399,90€</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="footer-container">
+        <section class="footer-contacto">
+          <h3>Contacto</h3>
 
-                <li class="tarjeta">
-                    <img src="/ASSETS/Catalogo/rule of rose.jpg">
-                    <p>Rule of Rose</p>
-                    <p>399,90€</p>
-                </li>
-            </ul>
-        </details>
-
-    </section>
-
-    <!-- ================= CINTA ================= -->
-    <section class="cinta">
-        <div class="cinta-movimiento">
-            <span>Envíos rápidos</span>
-            <span>Pagos seguros</span>
-            <span>Los mejores precios</span>
-            <span>Atención 24/7</span>
+          <p>Email: BitLove@info.es</p>
+          <p>Tel: +34 982 94 32 11</p>
+        </section>
+        <div class="footer-logo">
+          <img
+            src="ASSETS/Logos/logo_Empresa/Logo_Bit-love.png"
+            alt="Logo empresa"
+          />
         </div>
-    </section>
 
-    <!-- ================= CATEGORÍAS ================= -->
-    <section id="categorias" class="categorias">
-        <details>
-            <summary><h2>Catálogo</h2></summary>
+        <section class="footer-redes">
+          <h3>Nuestra comunidad</h3>
 
-            <ul>
-                <li><img src="/ASSETS/Categorias/Terror.png" alt=""></li>
-                <li><img src="/ASSETS/Categorias/21e21f76-6e09-4d3f-9d81-bacefe2dd75c.png" alt=""></li>
-                <li>ç<img src="/ASSETS/Categorias/5ef06aba-90e5-4ad0-b54c-a6f808b50db1.png" alt=""></li>
-                <li><img src="/ASSETS/Categorias/Accion.png" alt=""></li>
-                <li><img src="/ASSETS/Categorias/e1ed10af-cff4-4ef6-9b90-50c696353d61.png" alt=""></li>
-                <li>RPG</li>
-                <li>Multijugador</li>
-                <li>Deportes</li>
-            </ul>
-        </details>
-    </section>
+          <ul class="footer-redes-lista">
+            <li>
+              <a href="#" aria-label="Instagram">
+                <img
+                  src="ASSETS/Logos/logo_Media/instagram-logo-instagram-icon-transparent-free-png-2997976669.png"
+                  alt="Instagram"
+                />
+              </a>
+            </li>
 
-    <!-- ================= FAQ ================= -->
-    <section id="FAQ" class="faq">
-        <h2>Preguntas frecuentes</h2>
+            <li>
+              <a href="#" aria-label="Discord">
+                <img
+                  src="ASSETS/Logos/logo_Media/discord-logo.png"
+                  alt="Discord"
+                />
+              </a>
+            </li>
 
-        <details>
-            <summary>¿Los juegos son digitales o físicos?</summary>
-            <p>Tenemos ambas opciones.</p>
-        </details>
+            <li>
+              <a href="#" aria-label="Twitch">
+                <img
+                  src="ASSETS/Logos/logo_Media/twitch-logo-twitch.png"
+                  alt="Twitch"
+                />
+              </a>
+            </li>
 
-        <details>
-            <summary>¿Hacéis envíos?</summary>
-            <p>Sí, a toda España.</p>
-        </details>
+            <li>
+              <a href="#" aria-label="TikTok">
+                <img
+                  src="ASSETS/Logos/logo_Media/tiktok-logo-transparent-free-png-3092857255.png"
+                  alt="TikTok"
+                />
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
 
-        <details>
-            <summary>¿Se pueden devolver?</summary>
-            <p>Solo si no han sido activados.</p>
-        </details>
-    </section>
-
-</main>
-
-<!-- ================= FOOTER ================= -->
-<footer>
-
-    <section class="redes">
-        <h3>Nuestra comunidad</h3>
-
-        <ul class="grid">
-            <li class="tarjeta"><img src="/ASSETS/Logos/logo_Media/instagram-logo-instagram-icon-transparent-free-png-2997976669.png"></li>
-            <li class="tarjeta"><img src="/ASSETS/Logos/logo_Media/discord-logo.png"></li>
-            <li class="tarjeta"><img src="/ASSETS/Logos/logo_Media/twitch-logo-twitch.png"></li>
-            <li class="tarjeta"><img src="/ASSETS/Logos/logo_Media/tiktok-logo-transparent-free-png-3092857255.png"></li>
-        </ul>
-    </section>
-
-    <section class="contacto">
-        <p>&copy; 2026 First Love Gaming</p>
-        <p>Email: Firstlovegaming@info.es</p>
-        <p>Tel: +34 982 94 32 11</p>
-    </section>
-
-</footer>
-
-</body>
+      <section>
+        <p>&copy; 2026 BitLove</p>
+      </section>
+    </footer>
+  </body>
 </html>

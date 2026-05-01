@@ -1,19 +1,167 @@
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Nombre de empresa</title>
-    <meta name="descripción" content="Tienda de videojuegos-Salamanca-Capital-"> <!-- palabras especificas para la busqueda online-->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> <!--ICono para logo  en pestaña-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto  Bit-Love</title>
 
-<!--Pagina principal-->
-</head>
-<body>
-    <header>
+    <!-- SEO -->
+    <meta name="description" content="Tienda de videojuegos" />
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="ASSETS/Logos/logo_Empresa/Logo_Bit-love.png" />
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="topbar">
+      <!-- Logo + Título -->
+      <div class="header-top">
+        <img
+          src="ASSETS/Logos/logo_Empresa/Logo_Bit-love.png"
+          alt="Logo empresa"
+          class="logo"
+        />
+
+        <div class="brand-text">
+          <h2>Bit-Love</h2>
+          <p>Tu relación afectiva más sana</p>
+        </div>
+      </div>
+
+      <!-- Navegación -->
+      <nav class="nav">
+        <a href="index.html" class="btn btn-nav">Inicio</a>
+        <a href="Catalogojuegos.html" class="btn btn-nav">Catálogo</a>
+        <a href="contacto.html" class="btn btn-nav">Contacto</a>
+        <a href="quienesSomos.html" class="btn btn-nav">Quiénes somos</a>
+        <a href="FAQ.html" class="btn btn-nav">FAQ</a>
+      </nav>
     </header>
-    <body></body>
-    <footer></footer>
-</body>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+     
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="fondo-parallax contacto">
+        <h1>Contacto</h1>
+        <p>Si tienes cualquier duda, estaremos encantados de ayudarte.</p>
+
+        <form class="form">
+          <label class="campo">
+            <span>Nombre:</span>
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Tu nombre completo"
+              required
+            />
+          </label>
+
+          <label class="campo">
+            <span>Teléfono:</span>
+            <input type="tel" name="telefono" placeholder="600 00 00 00" />
+          </label>
+
+          <label class="campo">
+            <span>Email:</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="tu@email.com"
+              required
+            />
+          </label>
+
+          <label class="campo">
+            <span>Motivo del contacto:</span>
+            <select name="motivo" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option>Consulta de stock</option>
+              <option>Envíos</option>
+              <option>Devoluciones</option>
+              <option>Ayuda con mi videojuego</option>
+              <option>Otro</option>
+            </select>
+          </label>
+
+          <label class="campo">
+            <span>Mensaje:</span>
+            <textarea
+              rows="5"
+              name="mensaje"
+              placeholder="Cuéntanos cómo podemos ayudarte"
+              required
+            ></textarea>
+          </label>
+
+          <div class="acciones">
+            <button type="submit" class="btn btn-enviar">Enviar</button>
+            <button type="reset" class="btn btn-borrar">Borrar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="footer-container">
+        <section class="footer-contacto">
+          <h3>Contacto</h3>
+
+          <p>Email: BitLove@info.es</p>
+          <p>Tel: +34 982 94 32 11</p>
+        </section>
+        <div class="footer-logo">
+          <img
+            src="ASSETS/Logos/logo_Empresa/Logo_Bit-love.png"
+            alt="Logo empresa"
+          />
+        </div>
+
+        <section class="footer-redes">
+  <h3>Nuestra comunidad</h3>
+
+  <ul class="footer-redes-lista">
+    <li>
+      <a href="#" aria-label="Instagram">
+        <img src="ASSETS/Logos/logo_Media/instagram-logo-instagram-icon-transparent-free-png-2997976669.png" alt="Instagram">
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" aria-label="Discord">
+        <img src="ASSETS/Logos/logo_Media/discord-logo.png" alt="Discord">
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" aria-label="Twitch">
+        <img src="ASSETS/Logos/logo_Media/twitch-logo-twitch.png" alt="Twitch">
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" aria-label="TikTok">
+        <img src="ASSETS/Logos/logo_Media/tiktok-logo-transparent-free-png-3092857255.png" alt="TikTok">
+      </a>
+    </li>
+  </ul>
+</section>
+      </div>
+
+      <section>
+        <p>&copy; 2026 BitLove</p>
+      </section>
+    </footer>
+  </body>
 </html>
