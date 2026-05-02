@@ -5,10 +5,11 @@
   --shadow: 0 0px 30px rgba(117, 53, 115, 0.395);
   --btnshadow: 4px 4px 10px rgba(188, 65, 184, 0.395);
   --btn: #3e4144;
-  --Ff: Arial, Helvetica, sans-serif;
+  --th: "Press Start 2P";
+  --tp: Arial, Helvetica, sans-serif;
 }
 
-/* RESET */
+
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +19,16 @@
 body{
   background-color: var(--color-principal);
   color: white;
+  font-family: var(--tp);
+}
+
+
+p {
+  font-family: var(--tp);
+}
+
+h1, h2, h3 {
+  font-family: var(--th);
 }
 
 /*================= LAYOUT =================*/
@@ -56,7 +67,7 @@ header{
 
 /* TÍTULO */
 .brand-text{
-  font-family: "Press Start 2P";
+  font-family: var(--th);
   text-align: center;
 }
 
@@ -76,60 +87,35 @@ nav{
   gap: 20px;
   margin-top: 15px;
 }
-
-/* BOTONES NAV */
-.btn{
-  
-  border-radius: var(--bordes);
-  background-color: var(--btn);
-  box-shadow: var(--btnshadow);
-  border: none;
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-  
-   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-   width: 150px;
-  height: 50px;
-
+.fondo-parallax {
+  background-image: url('ASSETS/Fondo/fondo-pagina.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 60px 30px;
+  position: relative;
+  border-radius: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
-
-.btn:hover{
-  transform: scale(1.1);
-}
-
-
-
-
-
-/*====================== TENDENCIAS ======================*/
+/*====================== INICIO - TENDENCIAS ======================*/
 
 .tendencias{
   padding: 30px;
-  background-color: rgba(43, 40, 43, 0.92);;
+  background-color: rgba(43, 40, 43, 0.92);
   border-radius: var(--bordes);
   margin: 0 auto;
   color: black;
   box-shadow: var(--shadow);
   max-width: 1200px;
-  
 }
+
 .tendencias h2{
-
- color: aliceblue;
- font-family: "Press Start 2P";
+  color: aliceblue;
+  font-family: var(--th);
 }
-
-.tendencias .titulo{
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
 
 /* TITULO */
 .titulo-seccion{
@@ -147,9 +133,8 @@ nav{
 
 /* TARJETAS */
 .tarjeta{
-  background-color:  rgba(21, 20, 21, 0.92);
+  background-color: rgba(21, 20, 21, 0.92);
   border-radius: 10px;
-  
   text-align: center;
   overflow: hidden;
   width: 350px;
@@ -165,46 +150,64 @@ nav{
   padding: 5px;
   font-size: 14px;
   color: #ccc;
+  font-family: var(--tp);
+}
+
+.tarjeta .titulo{
+  font-size: 1.2rem;
+}
+
+.tarjeta .precio{
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .tarjeta:hover{
   transform: scale(1.05);
 }
 
+/* BOTÓN VER CATEGORÍAS */
+.referencia-tendencia {
+  text-align: center;
+  margin-top: 40px;
+}
 
-
-
-
-
+.referencia-tendencia p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: white;
+  font-family: var(--th);
+}
 
 /*====================== CATEGORIAS ======================*/
 .categorias{
   max-width: 1200px;
-  background-color: rgba(43, 40, 43, 0.92);;
+  background-color: rgba(43, 40, 43, 0.92);
   justify-items: center;
   border-radius: var(--bordes);
   padding-bottom: 1px;
   margin: 0 auto;
   box-shadow: var(--shadow);
   padding-top: 40px;
-  font-family: "Press Start 2P";
+}
+
+.categorias h2{
+  font-family: var(--th);
 }
 
 .categorias h3{
-  
   text-align: center;
-  
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--tp);
 }
 
 .categoria-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    gap: 30px; 
-    list-style: none;
-    padding: 0;
-    margin: 25px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 30px; 
+  list-style: none;
+  padding: 0;
+  margin: 25px 20px;
 }
 
 .cat-tarjeta{
@@ -213,39 +216,216 @@ nav{
 }
 
 .cat-tarjeta a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: white;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
 }
 
 .cat-tarjeta img {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .cat-tarjeta:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/*================= QUIÉNES SOMOS =================*/
+
+.quienes-somos {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(43, 40, 43, 0.92);
+  padding: 50px 40px;
+  border-radius: var(--bordes);
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 2;
+}
+
+.quienes-somos h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--th);
+  color: white;
+  font-size: 2.5rem;
+}
+
+.quienes-somos h2 {
+  font-family: var(--th);
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+.nosotros-contenido p {
+  font-family: var(--tp);
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.nosotros-contenido .intro {
+  font-size: 1.15rem;
+  color: white;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.nosotros-contenido strong {
+  color: white;
+}
+
+.valores-lista {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.valores-lista li {
+  background-color: rgba(21, 20, 21, 0.8);
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border-left: 4px solid rgba(188, 65, 184, 0.8);
+  font-family: var(--tp);
+  color: #ccc;
+  line-height: 1.6;
+  transition: 0.3s;
+}
+
+.valores-lista li:hover {
+  border-left-color: rgba(115, 188, 7, 0.8);
+  transform: translateX(5px);
+}
+
+.valores-lista li strong {
+  color: white;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.cierre {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid rgba(188, 65, 184, 0.3);
+  color: white ;
+}
+
+/* Botón de llamada a acción */
+.cta-contacto {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 2px solid rgba(188, 65, 184, 0.3);
+}
+
+.cta-contacto p {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 20px;
+  font-family: var(--th);
+}
+
+.btn-contacto {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: rgb(115, 188, 7);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--bordes);
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: var(--btnshadow);
+  font-family: var(--tp);
+}
+
+.btn-contacto:hover {
+  transform: scale(1.1);
+  background-color: rgb(95, 168, 0);
+  box-shadow: 0 6px 20px rgba(115, 188, 7, 0.5);
+}
+
+
+/* ================= FAQ ================= */
+
+.FAQ {
+  padding: 60px 30px;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(43, 40, 43, 0.92);
+  padding: 40px;
+  border-radius: var(--bordes);
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 2;
+}
+
+.faq-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--th);
+  color: white;
+  font-size: 2rem;
+}
+
+.faq-container details {
+  margin-bottom: 20px;
+  background-color: rgba(21, 20, 21, 0.8);
+  border-radius: 10px;
+  padding: 15px;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.faq-container details:hover {
+  border-color: rgba(188, 65, 184, 0.5);
+}
+
+.faq-container summary {
+  font-family: var(--tp);
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #fff;
+  list-style: none;
+  position: relative;
+  padding-left: 30px;
+}
+
+.faq-container summary::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  transition: 0.3s;
+  color: rgba(188, 65, 184, 0.8);
+}
+
+.faq-container details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.faq-container details p {
+  margin-top: 15px;
+  padding-left: 30px;
+  color: #ccc;
+  line-height: 1.6;
 }
 
 /*================= CONTACTO  =================*/
 
-.fondo-parallax {
-  background-image: url('ASSETS/Fondo/fondo-pagina.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;  /* efecto parallax */
-  min-height: 100vh;  /* ocupa toda la pantalla */
-  padding: 60px 30px;
-  position: relative;
-  border-radius: 0;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  font-family: "Press Start 2P";
-}
 
 
 #contacto.contacto::before {
@@ -257,13 +437,11 @@ nav{
   bottom: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0.75) 100%
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.65) 100%
   );
   z-index: 1;
 }
-
-
 
 /* Título y texto por encima del fondo */
 .contacto h1,
@@ -277,33 +455,41 @@ nav{
 .contacto h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
+  font-family: var(--th);
 }
 
 .contacto > p {
   font-size: 1.1rem;
   margin-bottom: 40px;
+  font-family: var(--tp);
 }
 
 .campo {
   display: flex;
   flex-direction: column;
-  margin-bottom: 25px; /* separación entre campos */
+  margin-bottom: 25px;
 }
+
 .campo span {
-  margin-bottom: 8px; /* separación label-input */
+  margin-bottom: 8px;
   font-size: 14px;
+  font-family: var(--tp);
+}
+
+.campo:hover{
+  border-color: rgba(188, 65, 184, 0.5);
 }
 
 /* El formulario con fondo semi-transparente */
 .contacto .form {
   position: relative;
   z-index: 2;
-  background-color: rgba(43, 40, 43, 0.92);  /* fondo oscuro semi-transparente */
+  background-color: rgba(43, 40, 43, 0.92);
   padding: 40px;
   border-radius: var(--bordes);
   max-width: 1000px;
   margin: 0 auto;
-  backdrop-filter: blur(10px);  /* efecto vidrio esmerilado */
+  backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
 }
 
@@ -315,39 +501,9 @@ nav{
   margin-bottom: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
-}
-
-/* BOTONES */
-.acciones {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.btn-enviar {
-  background-color: rgb(115, 188, 7);
-  width: 100px;
-  height: 50px;
-  color: white;
-  font-size:  1rem;
-}
-
-.btn-borrar {
-  background-color: gray;
-  width: 100px;
-  height: 50px;
-  color: white;
-  font-size: 1rem;
-}
-
-/*====================== FAQ ======================*/
-
-.faq{
-  padding: 30px;
-}
-
-.faq details{
-  margin-bottom: 10px;
+  font-family: var(--tp);
+  outline: none;  
+  border: 2px solid rgba(188, 65, 184, 0.5);
 }
 
 /*====================== FOOTER ======================*/
@@ -363,7 +519,7 @@ footer{
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
     "footer-contacto footer-logo footer-redes";
-  gap: 100px;
+  gap: 50px;
   margin: 0 auto;
   align-items: center;
 }
@@ -383,6 +539,7 @@ footer{
 .footer-redes h3 {
   margin-bottom: 20px;
   font-size: 25px;
+  font-family: var(--th);
 }
 
 .footer-redes-lista img {
@@ -409,4 +566,97 @@ footer{
 .footer-contacto h3{
   margin-bottom: 20px;
   font-size: 25px;
+  font-family: var(--th);
+}
+
+.footer-contacto p{
+  font-family: var(--tp);
+}
+
+/*=======BOTONES========*/
+
+.btn{
+  font-family: var(--tp);
+  font-size: 1rem;
+}
+
+.btn-nav{
+  border-radius: var(--bordes);
+  background-color: var(--btn);
+  box-shadow: var(--btnshadow);
+  border: none;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 150px;
+  height: 50px;
+}
+
+.btn-nav:hover{
+  transform: scale(1.1);
+}
+
+/* BOTON - TENDENCIAS*/
+.btn-tendencias {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color:rgb(95, 168, 0);
+  box-shadow: 0 6px 20px rgba(115, 188, 7, 0.5);;
+  color: white;
+  text-decoration: none;
+  border-radius: var(--bordes);
+  font-size: 1rem;
+  transition: 0.3s;
+  box-shadow: var(--btnshadow);
+  font-family: var(--tp);
+}
+
+.btn-tendencias:hover {
+  transform: scale(1.1);
+  background-color: #555;
+}
+
+/* BOTONES FORMULARIO*/
+.acciones {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.btn-enviar {
+  background-color: rgb(115, 188, 7);
+  width: 100px;
+  height: 50px;
+  color: white;
+  border-radius: var(--bordes);
+  font-family: var(--tp);
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  box-shadow: var(--btnshadow);
+}
+
+.btn-enviar:hover{
+  transform: scale(1.05);
+}
+
+.btn-borrar {
+  background-color: gray;
+  width: 100px;
+  height: 50px;
+  color: white;
+  border-radius: var(--bordes);
+  font-family: var(--tp);
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  box-shadow: var(--btnshadow);
+}
+
+.btn-borrar:hover{
+  transform: scale(1.05);
 }
