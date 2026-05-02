@@ -660,3 +660,191 @@ footer{
 .btn-borrar:hover{
   transform: scale(1.05);
 }
+
+/*====================== RESPONSIVE - MÓVIL ======================*/
+
+@media (max-width: 768px) {
+  
+  /* HEADER */
+  .logo {
+    width: 60px;
+  }
+
+  .brand-text h2 {
+    font-size: 16px;
+  }
+
+  .brand-text p {
+    font-size: 8px;
+  }
+
+  /* NAVEGACIÓN */
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .btn-nav {
+    width: 120px;
+    height: 45px;
+    font-size: 0.85rem;
+  }
+
+  /* TENDENCIAS */
+  .tendencias {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .titulo-seccion {
+    font-size: 1.2rem;
+  }
+
+  .grid {
+    gap: 15px;
+  }
+
+  .tarjeta {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* CATEGORÍAS */
+  .categoria-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 20px 10px;
+  }
+
+  /* CONTACTO */
+  .contacto h1 {
+    font-size: 1.8rem;
+  }
+
+  .contacto > p {
+    font-size: 1rem;
+  }
+
+  .contacto .form {
+    padding: 25px;
+    max-width: 100%;
+  }
+
+  /* FAQ */
+  .faq-container {
+    padding: 25px;
+    max-width: 100%;
+  }
+
+  .faq-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .faq-container summary {
+    font-size: 1rem;
+    padding-left: 25px;
+  }
+
+  .faq-container details p {
+    padding-left: 25px;
+    font-size: 0.95rem;
+  }
+
+  /* QUIÉNES SOMOS */
+  .quienes-somos {
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+
+  .quienes-somos h1 {
+    font-size: 1.8rem;
+  }
+
+  .quienes-somos h2 {
+    font-size: 1.1rem;
+  }
+
+  .nosotros-contenido p {
+    font-size: 1rem;
+  }
+
+  .nosotros-contenido .intro {
+    font-size: 1.05rem;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "footer-logo"
+      "footer-contacto"
+      "footer-redes";
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    width: 150px;
+  }
+
+  .footer-contacto h3,
+  .footer-redes h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-redes-lista {
+    justify-content: center;
+  }
+
+  /* BOTONES */
+  .btn-tendencias {
+    padding: 12px 25px;
+    font-size: 0.95rem;
+  }
+
+  .btn-contacto {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  .cta-contacto p {
+    font-size: 1.1rem;
+  }
+
+  /* FONDO PARALLAX */
+  .fondo-parallax {
+    background-attachment: scroll;
+    padding: 40px 15px;
+  }
+}
+
+/* MÓVIL PEQUEÑO */
+@media (max-width: 480px) {
+  
+  .brand-text h2 {
+    font-size: 14px;
+  }
+
+  .btn-nav {
+    width: 100px;
+    height: 40px;
+    font-size: 0.75rem;
+  }
+
+  .tarjeta {
+    width: 100%;
+  }
+
+  .contacto h1,
+  .quienes-somos h1 {
+    font-size: 1.5rem;
+  }
+
+  .faq-container h1 {
+    font-size: 1.3rem;
+  }
+
+  .footer-logo img {
+    width: 120px;
+  }
+}
